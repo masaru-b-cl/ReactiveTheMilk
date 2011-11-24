@@ -34,5 +34,15 @@ namespace ReactiveTheMilk
 				.Select(x => HttpUtility.UrlEncode(x.Key) + "=" + HttpUtility.UrlEncode(x.Value))
 				.Join("&");
 		}
+
+		public static ParameterList ToList(this IEnumerable<Parameter> parameters)
+		{
+			var list = new ParameterList();
+			foreach (var item in parameters)
+			{
+				list.Add(item.Key, item.Value);
+			}
+			return list;
+		}
 	}
 }

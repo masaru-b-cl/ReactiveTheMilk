@@ -27,7 +27,7 @@ namespace ReactiveTheMilk
       this._secret = secret;
     }
 
-    public string GenerateSignature(Parameter[] parameters)
+    public string GenerateSignature(IEnumerable<Parameter> parameters)
     {
       // パラメータをキー順に並べ、キーと値を並べて、全パラメータ文連結する
       var paramstr = parameters

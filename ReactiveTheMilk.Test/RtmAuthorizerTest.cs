@@ -7,6 +7,7 @@ using System.Reactive.Linq;
 using System.Net;
 using ReactiveTheMilk.Moles;
 using System.Net.Moles;
+using Codeplex.Reactive.Asynchronous.Moles;
 
 
 namespace ReactiveTheMilk
@@ -63,6 +64,134 @@ namespace ReactiveTheMilk
 			request.RequestUri.OriginalString.Is("https://api.rememberthemilk.com/services/rest/");
 			request.Method.Is("POST");
 			request.ContentType.Is("application/x-www-form-urlencoded");
+		}
+
+		[TestMethod]
+		[HostType("Moles")]
+		public void TestGetRtmResponse()
+		{
+			MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter =
+				(r, parameters) =>
+				{
+					var array = parameters.ToArray();
+					array[0].Key.Is("method");
+					array[0].Value.Is("method");
+
+					array[1].Key.Is("api_key");
+					array[1].Value.Is(ApiKey);
+
+					return "signature";
+				};
+
+			MParametersExtension.ToPostParameterIEnumerableOfParameter =
+				parameters =>
+				{
+					var array = parameters.ToArray();
+					array[0].Key.Is("method");
+					array[0].Value.Is("method");
+
+					array[1].Key.Is("api_key");
+					array[1].Value.Is(ApiKey);
+
+					array[2].Key.Is("api_sig");
+					array[2].Value.Is("signature");
+
+					return "parameters";
+				};
+
+			var request = new SWebRequest();
+			MRtmAuthorizer.CreateRtmWebRequest = () => request;
+
+			var response = new SWebResponse();
+			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
+				(req, param, encoding) =>
+				{
+					req.Is(request);
+					param.Is("parameters");
+					encoding.Is(Encoding.UTF8);
+
+					return Observable.Return(response);
+				};
+
+			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
+				(res, encoding) =>
+				{
+					res.Is(response);
+					encoding.Is(Encoding.UTF8);
+
+					return Observable.Return(@"<rsp stat=""ok""></rsp>");
+				};
+
+			string rspRaw = rtm.GetRtmResponse("method").First();
+
+			rspRaw.Is(@"<rsp stat=""ok""></rsp>");
+		}
+
+		[TestMethod]
+		[HostType("Moles")]
+		public void TestGetRtmResponseWithParameters()
+		{
+			MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter =
+				(r, parameters) =>
+				{
+					var array = parameters.ToArray();
+					array[0].Key.Is("key");
+					array[0].Value.Is("value");
+
+					array[1].Key.Is("method");
+					array[1].Value.Is("method");
+
+					array[2].Key.Is("api_key");
+					array[2].Value.Is(ApiKey);
+
+					return "signature";
+				};
+
+			MParametersExtension.ToPostParameterIEnumerableOfParameter =
+				parameters =>
+				{
+					var array = parameters.ToArray();
+					array[0].Key.Is("key");
+					array[0].Value.Is("value");
+
+					array[1].Key.Is("method");
+					array[1].Value.Is("method");
+
+					array[2].Key.Is("api_key");
+					array[2].Value.Is(ApiKey);
+
+					array[3].Key.Is("api_sig");
+					array[3].Value.Is("signature");
+
+					return "parameters";
+				};
+
+			var request = new SWebRequest();
+			MRtmAuthorizer.CreateRtmWebRequest = () => request;
+
+			var response = new SWebResponse();
+			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
+				(req, param, encoding) =>
+				{
+					req.Is(request);
+					param.Is("parameters");
+					encoding.Is(Encoding.UTF8);
+
+					return Observable.Return(response);
+				};
+
+			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
+				(res, encoding) =>
+				{
+					res.Is(response);
+					encoding.Is(Encoding.UTF8);
+
+					return Observable.Return(@"<rsp stat=""ok""></rsp>");
+				};
+
+			string rspRaw = rtm.GetRtmResponse("method", new[] {new Parameter("key", "value")}).First();
+
+			rspRaw.Is(@"<rsp stat=""ok""></rsp>");
 		}
 	}
 }

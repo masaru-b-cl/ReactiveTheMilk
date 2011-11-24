@@ -130,6 +130,10 @@
         <member name="P:ReactiveTheMilk.Moles.MParametersExtension.Behavior">
             <summary>Assigns the behavior for all methods of the moled type</summary>
         </member>
+        <member name="P:ReactiveTheMilk.Moles.MParametersExtension.ToListIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParametersExtension.ToList(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
+            </summary>
+        </member>
         <member name="P:ReactiveTheMilk.Moles.MParametersExtension.ToPostParameterIEnumerableOfParameter">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParametersExtension.ToPostParameter(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
             </summary>
@@ -173,12 +177,20 @@
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String)"/>
             </summary>
         </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.GetRtmResponseStringIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String,System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
+            </summary>
+        </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__0String">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__0(System.String)"/>
             </summary>
         </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__1XElement">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__1(System.Xml.Linq.XElement)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetRtmResponseb__4WebResponse">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetRtmResponse&gt;b__4(System.Net.WebResponse)"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances">
@@ -190,6 +202,10 @@
         </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances.GetRtmResponseString">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances.GetRtmResponseStringIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String,System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MRtmBase">
@@ -215,8 +231,8 @@
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.#ctor(System.String,System.String)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmBase.GenerateSignatureParameterArray">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(ReactiveTheMilk.Parameter[])"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.GenerateSignatureIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
             </summary>
         </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmBase._GenerateSignatureb__0Parameter">
@@ -230,8 +246,8 @@
         <member name="T:ReactiveTheMilk.Moles.MRtmBase.AllInstances">
             <summary>Define moles for all instances members</summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmBase.AllInstances.GenerateSignatureParameterArray">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(ReactiveTheMilk.Parameter[])"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MUtils">
