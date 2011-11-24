@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ReactiveTheMilk.Moles</name>
+    </assembly>
+    <members>
+        <member name="T:ReactiveTheMilk.Moles.MParameter">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.Parameter"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameter.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameter.#ctor(ReactiveTheMilk.Parameter)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.ConstructorStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.Parameter.#ctor(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.KeyGet">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Key"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.KeySetString">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Key"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.ValueGet">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Value"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.ValueSetString">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Value"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MParameter.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.AllInstances.KeyGet">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Key"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.AllInstances.KeySetString">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Key"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.AllInstances.ValueGet">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Value"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameter.AllInstances.ValueSetString">
+            <summary>Sets the mole of <see cref="P:ReactiveTheMilk.Parameter.Value"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MParameterList">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.ParameterList"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.#ctor(ReactiveTheMilk.ParameterList)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.ICollection)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.IList)">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.Generic.ICollection{ReactiveTheMilk.Parameter})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.Generic.IEnumerable{ReactiveTheMilk.Parameter})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParameterList.Bind(System.Collections.Generic.IList{ReactiveTheMilk.Parameter})">
+            <summary>Binds the members of the interface to the mole.</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameterList.AddStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParameterList.Add(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameterList.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameterList.Constructor">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParameterList.#ctor"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MParameterList.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParameterList.AllInstances.AddStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParameterList.Add(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MParametersExtension">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.ParametersExtension"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParametersExtension.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParametersExtension.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MParametersExtension.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParametersExtension.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParametersExtension.ToPostParameterIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParametersExtension.ToPostParameter(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MParametersExtension._ToPostParameterb__0Parameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.ParametersExtension.&lt;ToPostParameter&gt;b__0(ReactiveTheMilk.Parameter)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MRtmAuthorizer">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.RtmAuthorizer"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmAuthorizer.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmAuthorizer.#ctor(ReactiveTheMilk.RtmAuthorizer)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmAuthorizer.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmAuthorizer.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.ConstructorStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.#ctor(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.CreateRtmWebRequest">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.CreateRtmWebRequest"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.GetFrob">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetFrob"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.GetRtmResponseString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__0String">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__0(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__1XElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__1(System.Xml.Linq.XElement)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances.GetFrob">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetFrob"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances.GetRtmResponseString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetRtmResponse(System.String)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MRtmBase">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.RtmBase"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmBase.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmBase.#ctor(ReactiveTheMilk.RtmBase)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MRtmBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.ConstructorStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.#ctor(System.String,System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.GenerateSignatureParameterArray">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(ReactiveTheMilk.Parameter[])"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase._GenerateSignatureb__0Parameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.&lt;GenerateSignature&gt;b__0(ReactiveTheMilk.Parameter)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase._GenerateSignatureb__1Parameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.&lt;GenerateSignature&gt;b__1(ReactiveTheMilk.Parameter)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MRtmBase.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MRtmBase.AllInstances.GenerateSignatureParameterArray">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(ReactiveTheMilk.Parameter[])"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MUtils">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.Utils"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MUtils.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MUtils.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MUtils.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MUtils.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MUtils.ConcatIEnumerableOfString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.Utils.Concat(System.Collections.Generic.IEnumerable`1{System.String})"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MUtils.JoinIEnumerableOfStringString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.Utils.Join(System.Collections.Generic.IEnumerable`1{System.String},System.String)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.SParameter">
+            <summary>Stub type of <see cref="T:ReactiveTheMilk.Parameter"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SParameter.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SParameter.InitializeStub">
+            <summary>Initializes a new instance of type SParameter</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SParameter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SParameter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.SParameterList">
+            <summary>Stub type of <see cref="T:ReactiveTheMilk.ParameterList"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SParameterList.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SParameterList.InitializeStub">
+            <summary>Initializes a new instance of type SParameterList</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SParameterList.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SParameterList.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.SRtmAuthorizer">
+            <summary>Stub type of <see cref="T:ReactiveTheMilk.RtmAuthorizer"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SRtmAuthorizer.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SRtmAuthorizer.InitializeStub">
+            <summary>Initializes a new instance of type SRtmAuthorizer</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SRtmAuthorizer.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SRtmAuthorizer.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.SRtmBase">
+            <summary>Stub type of <see cref="T:ReactiveTheMilk.RtmBase"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SRtmBase.#ctor(System.String,System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SRtmBase.InitializeStub">
+            <summary>Initializes a new instance of type SRtmBase</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SRtmBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SRtmBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+    </members>
+</doc>
