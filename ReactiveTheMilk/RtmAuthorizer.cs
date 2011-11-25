@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Reactive.Linq;
-using System.Net;
 using System.Xml.Linq;
-using Codeplex.Reactive.Asynchronous;
 
 namespace ReactiveTheMilk
 {
@@ -18,58 +13,16 @@ namespace ReactiveTheMilk
 		{
 		}
 
+		/// <summary>
+		/// frob取得
+		/// </summary>
+		/// <returns></returns>
 		public IObservable<string> GetFrob()
 		{
-			IObservable<string> result = GetRtmResponse("rtm.auth.getFrob");
-			return result
+			return GetRtmResponse("rtm.auth.getFrob")
 				.Select(rspRaw => XElement.Parse(rspRaw))
 				.Select(rsp => rsp.Element("frob").Value);
 		}
 
-		public IObservable<string> GetRtmResponse(string method)
-		{
-			return GetRtmResponse(method, new Parameter[] { });
-		}
-
-		public IObservable<string> GetRtmResponse(string method, IEnumerable<Parameter> parameters)
-		{
-			// パラメータリスト作成
-			var paramList = parameters.ToList();
-			paramList.Add("method", method);
-			paramList.Add("api_key", this._apiKey);
-
-			// signature生成
-			string signature = GenerateSignature(paramList);
-			paramList.Add("api_sig", signature);
-
-			// POSTパラメータ構築
-			string postParameter = paramList.ToPostParameter();
-
-			// RTM API呼び出し
-			return CreateRtmWebRequest()
-				.UploadStringAsync(postParameter, Encoding.UTF8)
-				.SelectMany(r => r.DownloadStringAsync(Encoding.UTF8))
-				.Do(rspRaw =>
-				{
-					var rsp = XElement.Parse(rspRaw);
-					var stat = (string)rsp.Attribute("stat");
-					if (stat == "fail")
-					{
-						var err = rsp.Element("err");
-						var code = (string)err.Attribute("code");
-						var msg = (string)err.Attribute("msg");
-						throw new RtmException(code, msg);
-					}
-				}
-				);
-		}
-
-		public static WebRequest CreateRtmWebRequest()
-		{
-			WebRequest request = WebRequest.Create("https://api.rememberthemilk.com/services/rest/");
-			request.Method = "POST";
-			request.ContentType = "application/x-www-form-urlencoded";
-			return request;
-		}
 	}
 }

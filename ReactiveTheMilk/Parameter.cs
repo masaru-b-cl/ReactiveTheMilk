@@ -6,6 +6,9 @@ using System.Web;
 
 namespace ReactiveTheMilk
 {
+	/// <summary>
+	/// RTM APIパラメーター
+	/// </summary>
 	public class Parameter
 	{
 		public string Key { get; private set; }
@@ -18,31 +21,23 @@ namespace ReactiveTheMilk
 		}
 	}
 
-	public class ParameterList : List<Parameter>
-	{
-		public void Add(string key, string value)
-		{
-			Add(new Parameter(key, value));
-		}
-	}
-
 	public static class ParametersExtension
 	{
-		public static String ToPostParameter(this IEnumerable<Parameter> parameters)
+		public static void Add(this ICollection<Parameter> parameters, string key, string value)
+		{
+			parameters.Add(new Parameter(key, value));
+		}
+
+		/// <summary>
+		/// RTM APIパラメーターをPOSTデータ用の文字列にする
+		/// </summary>
+		/// <param name="parameters"></param>
+		/// <returns></returns>
+		public static String ToPostData(this IEnumerable<Parameter> parameters)
 		{
 			return parameters
 				.Select(x => HttpUtility.UrlEncode(x.Key) + "=" + HttpUtility.UrlEncode(x.Value))
 				.Join("&");
-		}
-
-		public static ParameterList ToList(this IEnumerable<Parameter> parameters)
-		{
-			var list = new ParameterList();
-			foreach (var item in parameters)
-			{
-				list.Add(item.Key, item.Value);
-			}
-			return list;
 		}
 	}
 }

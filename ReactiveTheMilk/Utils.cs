@@ -5,14 +5,14 @@ using System.Text;
 
 namespace ReactiveTheMilk
 {
-  public static class Utils
+  internal static class Utils
   {
-    public static string Join(this IEnumerable<string> values, string separater)
+		internal static string Join(this IEnumerable<string> values, string separater)
     {
       return String.Join(separater, values);
     }
 
-    public static string Concat(this IEnumerable<string> values)
+		internal static string Concat(this IEnumerable<string> values)
     {
       return String.Concat(values);
     }

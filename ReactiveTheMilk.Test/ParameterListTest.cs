@@ -1,6 +1,7 @@
 ﻿using ReactiveTheMilk;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace ReactiveTheMilk
 {
@@ -11,7 +12,7 @@ namespace ReactiveTheMilk
 		public void TestAdd()
 		{
 			// 前準備
-			var parameters = new ParameterList();
+			var parameters = new List<Parameter>();
 
 			// 実行
 			parameters.Add("key", "value");
@@ -21,15 +22,15 @@ namespace ReactiveTheMilk
 		}
 
 		[TestMethod]
-		public void TestToPostParameter()
+		public void TestToPostData()
 		{
 			// 前準備
-			var parameters = new ParameterList() {
+			var parameters = new List<Parameter>() {
 				new Parameter("key1", "value1"),
 				new Parameter("key 2", "value 2")
 			};
 
-			Assert.AreEqual(parameters.ToPostParameter(), "key1=value1&key+2=value+2");
+			Assert.AreEqual(parameters.ToPostData(), "key1=value1&key+2=value+2");
 		}
 	}
 }

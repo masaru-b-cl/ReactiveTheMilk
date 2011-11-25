@@ -19,7 +19,7 @@ namespace ReactiveTheMilk
 		private const string Secret = "signature";
 		private const string Frob = "frob";
 
-		private SRtmAuthorizer rtm;
+		private RtmAuthorizer rtm;
 
 		[TestInitialize]
 		public void SetUp()
@@ -28,23 +28,12 @@ namespace ReactiveTheMilk
 		}
 
 		[TestMethod]
-		public void TestGenerateSignature()
-		{
-			var method = new Parameter("method", "rtm");
-			var api_key = new Parameter("api_key", ApiKey);
-			var parameters = new Parameter[] { method, api_key };
-			String signature = rtm.GenerateSignature(parameters);
-
-			signature.Is("2210109e7b5762b07190d4fb5abc68c7");
-		}
-
-		[TestMethod]
 		[HostType("Moles")]
 		public void TestGetFrob()
 		{
 			var rspRaw = @"<rsp stat=""ok""><frob>frob</frob></rsp>";
 
-			MRtmAuthorizer.AllInstances.GetRtmResponseString = (a, method) =>
+			MRtmBase.AllInstances.GetRtmResponseString = (a, method) =>
 			{
 				method.Is("rtm.auth.getFrob");
 				return Observable.Return(rspRaw);
@@ -56,174 +45,5 @@ namespace ReactiveTheMilk
 			frob.Is("frob");
 		}
 
-		[TestMethod]
-		public void TestCreateRtmWebRequest()
-		{
-			WebRequest request = RtmAuthorizer.CreateRtmWebRequest();
-
-			request.RequestUri.OriginalString.Is("https://api.rememberthemilk.com/services/rest/");
-			request.Method.Is("POST");
-			request.ContentType.Is("application/x-www-form-urlencoded");
-		}
-
-		[TestMethod]
-		[HostType("Moles")]
-		public void TestGetRtmResponse()
-		{
-			MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter =
-				(r, parameters) =>
-				{
-					var array = parameters.ToArray();
-					array[0].Key.Is("method");
-					array[0].Value.Is("method");
-
-					array[1].Key.Is("api_key");
-					array[1].Value.Is(ApiKey);
-
-					return "signature";
-				};
-
-			MParametersExtension.ToPostParameterIEnumerableOfParameter =
-				parameters =>
-				{
-					var array = parameters.ToArray();
-					array[0].Key.Is("method");
-					array[0].Value.Is("method");
-
-					array[1].Key.Is("api_key");
-					array[1].Value.Is(ApiKey);
-
-					array[2].Key.Is("api_sig");
-					array[2].Value.Is("signature");
-
-					return "parameters";
-				};
-
-			var request = new SWebRequest();
-			MRtmAuthorizer.CreateRtmWebRequest = () => request;
-
-			var response = new SWebResponse();
-			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
-				(req, param, encoding) =>
-				{
-					req.Is(request);
-					param.Is("parameters");
-					encoding.Is(Encoding.UTF8);
-
-					return Observable.Return(response);
-				};
-
-			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
-				(res, encoding) =>
-				{
-					res.Is(response);
-					encoding.Is(Encoding.UTF8);
-
-					return Observable.Return(@"<rsp stat=""ok""></rsp>");
-				};
-
-			string rspRaw = rtm.GetRtmResponse("method").First();
-
-			rspRaw.Is(@"<rsp stat=""ok""></rsp>");
-		}
-
-		[TestMethod]
-		[HostType("Moles")]
-		public void TestGetRtmResponseWithParameters()
-		{
-			MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter =
-				(r, parameters) =>
-				{
-					var array = parameters.ToArray();
-					array[0].Key.Is("key");
-					array[0].Value.Is("value");
-
-					array[1].Key.Is("method");
-					array[1].Value.Is("method");
-
-					array[2].Key.Is("api_key");
-					array[2].Value.Is(ApiKey);
-
-					return "signature";
-				};
-
-			MParametersExtension.ToPostParameterIEnumerableOfParameter =
-				parameters =>
-				{
-					var array = parameters.ToArray();
-					array[0].Key.Is("key");
-					array[0].Value.Is("value");
-
-					array[1].Key.Is("method");
-					array[1].Value.Is("method");
-
-					array[2].Key.Is("api_key");
-					array[2].Value.Is(ApiKey);
-
-					array[3].Key.Is("api_sig");
-					array[3].Value.Is("signature");
-
-					return "parameters";
-				};
-
-			var request = new SWebRequest();
-			MRtmAuthorizer.CreateRtmWebRequest = () => request;
-
-			var response = new SWebResponse();
-			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
-				(req, param, encoding) =>
-				{
-					req.Is(request);
-					param.Is("parameters");
-					encoding.Is(Encoding.UTF8);
-
-					return Observable.Return(response);
-				};
-
-			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
-				(res, encoding) =>
-				{
-					res.Is(response);
-					encoding.Is(Encoding.UTF8);
-
-					return Observable.Return(@"<rsp stat=""ok""></rsp>");
-				};
-
-			string rspRaw = rtm.GetRtmResponse("method", new[] {new Parameter("key", "value")}).First();
-
-			rspRaw.Is(@"<rsp stat=""ok""></rsp>");
-		}
-
-		[TestMethod]
-		[HostType("Moles")]
-		public void TestGetRtmResponseWhenFail()
-		{
-			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
-				(req, param, encoding) =>
-				{
-					return Observable.Return(new SWebResponse());
-				};
-
-			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
-				(res, encoding) =>
-				{
-					return Observable.Return(@"<rsp stat=""fail""><err code=""112"" msg=""Method &quot;rtm.auth.getFrobs&quot; not found""/></rsp>");
-				};
-
-			bool catched = false;
-			rtm.GetRtmResponse("method")
-				.Catch((RtmException ex) => {
-					catched = true;
-					ex.Code.Is("112");
-					ex.Msg.Is(@"Method ""rtm.auth.getFrobs"" not found");
-					return Observable.Return("");
-				}).First();
-
-			if (!catched)
-			{
-				Assert.Fail("例外をキャッチしていない");
-			}
-
-		}
 	}
 }
