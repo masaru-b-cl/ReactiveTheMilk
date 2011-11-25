@@ -193,5 +193,37 @@ namespace ReactiveTheMilk
 
 			rspRaw.Is(@"<rsp stat=""ok""></rsp>");
 		}
+
+		[TestMethod]
+		[HostType("Moles")]
+		public void TestGetRtmResponseWhenFail()
+		{
+			MWebRequestExtensions.UploadStringAsyncWebRequestStringEncoding =
+				(req, param, encoding) =>
+				{
+					return Observable.Return(new SWebResponse());
+				};
+
+			MWebResponseExtensions.DownloadStringAsyncWebResponseEncoding =
+				(res, encoding) =>
+				{
+					return Observable.Return(@"<rsp stat=""fail""><err code=""112"" msg=""Method &quot;rtm.auth.getFrobs&quot; not found""/></rsp>");
+				};
+
+			bool catched = false;
+			rtm.GetRtmResponse("method")
+				.Catch((RtmException ex) => {
+					catched = true;
+					ex.Code.Is("112");
+					ex.Msg.Is(@"Method ""rtm.auth.getFrobs"" not found");
+					return Observable.Return("");
+				}).First();
+
+			if (!catched)
+			{
+				Assert.Fail("例外をキャッチしていない");
+			}
+
+		}
 	}
 }

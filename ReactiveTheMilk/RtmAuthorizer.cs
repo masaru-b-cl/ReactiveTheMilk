@@ -48,7 +48,20 @@ namespace ReactiveTheMilk
 			// RTM API呼び出し
 			return CreateRtmWebRequest()
 				.UploadStringAsync(postParameter, Encoding.UTF8)
-				.SelectMany(r => r.DownloadStringAsync(Encoding.UTF8));
+				.SelectMany(r => r.DownloadStringAsync(Encoding.UTF8))
+				.Do(rspRaw =>
+				{
+					var rsp = XElement.Parse(rspRaw);
+					var stat = (string)rsp.Attribute("stat");
+					if (stat == "fail")
+					{
+						var err = rsp.Element("err");
+						var code = (string)err.Attribute("code");
+						var msg = (string)err.Attribute("msg");
+						throw new RtmException(code, msg);
+					}
+				}
+				);
 		}
 
 		public static WebRequest CreateRtmWebRequest()
