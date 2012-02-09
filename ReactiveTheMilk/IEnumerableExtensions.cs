@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ReactiveTheMilk
 {
-  internal static class Utils
+  internal static class IEnumerableExtensions
   {
 		internal static string Join(this IEnumerable<string> values, string separater)
     {

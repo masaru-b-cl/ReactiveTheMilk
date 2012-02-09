@@ -43,19 +43,7 @@ namespace ReactiveTheMilk
 		/// <returns></returns>
 		public string GenerateSignature(IEnumerable<Parameter> parameters)
 		{
-			// パラメータをキー順に並べ、キーと値を並べて、全パラメータ文連結する
-			var paramstr = parameters
-				.OrderBy(x => x.Key)
-				.Select(x => x.Key + x.Value)
-				.Concat();
-
-			// Secretと連結し、MD5ハッシュを出す
-			string source = this._secret + paramstr;
-			using (var md5 = MD5.Create())
-			{
-				byte[] md5sumBytes = md5.ComputeHash(Encoding.UTF8.GetBytes(source));
-				return BitConverter.ToString(md5sumBytes).ToLower().Replace("-", "");
-			}
+      return RtmUtils.GenerateSignature(parameters, this._secret);
 		}
 
 		/// <summary>

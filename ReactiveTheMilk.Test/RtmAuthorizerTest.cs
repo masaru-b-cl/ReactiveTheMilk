@@ -19,7 +19,7 @@ namespace ReactiveTheMilk
 		private const string Secret = "signature";
 		private const string Frob = "frob";
 
-		private RtmAuthorizer rtm;
+    private RtmAuthorizer rtm;
 
 		[TestInitialize]
 		public void SetUp()
@@ -44,6 +44,41 @@ namespace ReactiveTheMilk
 
 			frob.Is("frob");
 		}
+
+    [TestMethod]
+    [HostType("Moles")]
+    public void TestGetAuthenticationUrl()
+    {
+      var called = false;
+      var frob = "frob";
+
+      MRtmUtils.GenerateSignatureIEnumerableOfParameterString = (parameters, secret) =>
+        {
+          var paramarray = parameters.ToArray();
+          {
+            var parameter = paramarray[0];
+            parameter.Key.Is("api_key");
+            parameter.Value.Is(ApiKey);
+          }
+          {
+            var parameter = paramarray[1];
+            parameter.Key.Is("perms");
+            parameter.Value.Is("delete");
+          }
+          {
+            var parameter = paramarray[2];
+            parameter.Key.Is("frob");
+            parameter.Value.Is(frob);
+          }
+          called = true;
+          return "signature";
+        };
+
+      string url = rtm.GetAuthenticationUrl(frob);
+
+      called.Is(true);
+      url.Is("http://www.rememberthemilk.com/services/auth/?api_key=api_key&perms=delete&frob=frob&api_sig=signature");
+    }
 
 	}
 }

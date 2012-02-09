@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reactive.Linq;
 using System.Xml.Linq;
+using System.Collections.Generic;
 
 namespace ReactiveTheMilk
 {
@@ -24,5 +25,20 @@ namespace ReactiveTheMilk
 				.Select(rsp => rsp.Element("frob").Value);
 		}
 
-	}
+
+    public string GetAuthenticationUrl(string frob)
+    {
+      var parameters = new List<Parameter>();
+      parameters.Add("api_key", this._apiKey);
+      parameters.Add("perms", "delete");
+      parameters.Add("frob", frob);
+
+      string signature = GenerateSignature(parameters);
+      parameters.Add("api_sig", signature);
+
+
+      string postData = parameters.ToPostData();
+      return @"http://www.rememberthemilk.com/services/auth/?" + postData;
+    }
+  }
 }

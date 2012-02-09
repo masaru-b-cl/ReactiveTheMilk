@@ -59,7 +59,8 @@
     <Compile Include="RtmAuthorizer.cs" />
     <Compile Include="RtmBase.cs" />
     <Compile Include="RtmException.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="RtmUtils.cs" />
+    <Compile Include="IEnumerableExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
