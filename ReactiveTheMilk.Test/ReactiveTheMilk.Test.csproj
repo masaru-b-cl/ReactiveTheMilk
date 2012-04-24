@@ -38,8 +38,9 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="ReactiveProperty.NET40, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveProperty.0.3.1.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
+    <Reference Include="ReactiveProperty.NET40, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ReactiveProperty.0.3.2.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
     </Reference>
     <Reference Include="ReactiveProperty.NET40.Moles, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="ReactiveTheMilk.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
@@ -53,11 +54,11 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Moles, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0ae41878053f6703, processorArchitecture=MSIL" />
     <Reference Include="System.Reactive, Version=1.0.10621.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Rx-Main.1.0.10621\lib\Net4\System.Reactive.dll</HintPath>
+      <HintPath>..\packages\Rx-Main.1.0.11226\lib\Net4\System.Reactive.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveProperty.0.3.1.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\ReactiveProperty.0.3.2.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />

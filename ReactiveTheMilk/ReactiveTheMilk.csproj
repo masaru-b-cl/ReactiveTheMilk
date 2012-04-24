@@ -33,18 +33,19 @@
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="ReactiveProperty.NET40">
-      <HintPath>..\packages\ReactiveProperty.0.3.1.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
+    <Reference Include="ReactiveProperty.NET40, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ReactiveProperty.0.3.2.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Reactive">
-      <HintPath>..\packages\Rx-Main.1.0.10621\lib\Net4\System.Reactive.dll</HintPath>
+    <Reference Include="System.Reactive, Version=1.0.10621.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Main.1.0.11226\lib\Net4\System.Reactive.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReactiveProperty.0.3.1.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\ReactiveProperty.0.3.2.0\lib\NET40\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -59,6 +60,8 @@
     <Compile Include="RtmAuthorizer.cs" />
     <Compile Include="RtmBase.cs" />
     <Compile Include="RtmException.cs" />
+    <Compile Include="RtmToken.cs" />
+    <Compile Include="RtmUser.cs" />
     <Compile Include="RtmUtils.cs" />
     <Compile Include="IEnumerableExtensions.cs" />
   </ItemGroup>
