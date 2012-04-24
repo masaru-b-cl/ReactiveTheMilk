@@ -28,8 +28,8 @@ namespace ReactiveTheMilk
     [TestMethod]
     [HostType("Moles")]
     public void TestGenerateSignature()
-		{
-			var parameters = new Parameter[]{};
+    {
+      var parameters = new Parameter[] { };
 
       var called = false;
       MRtmUtils.GenerateSignatureIEnumerableOfParameterString = (xs, secret) =>
@@ -46,14 +46,14 @@ namespace ReactiveTheMilk
 
       called.Is(true);
       signature.Is("signature");
-		}
+    }
 
     [TestMethod]
     [HostType("Moles")]
     public void TestGetRtmResponse()
     {
       bool called = false;
-      MRtmBase.AllInstances.GetRtmResponseStringIEnumerableOfParameter =
+      MRtmBase.AllInstances.GetRtmResponseStringParameterArray =
         (r, method, parameters) =>
         {
           called = true;
