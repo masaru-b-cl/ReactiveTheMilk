@@ -59,7 +59,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RtmAuthorizer.cs" />
     <Compile Include="RtmBase.cs" />
+    <Compile Include="RtmClient.cs" />
     <Compile Include="RtmException.cs" />
+    <Compile Include="RtmList.cs" />
     <Compile Include="RtmToken.cs" />
     <Compile Include="RtmUser.cs" />
     <Compile Include="RtmUtils.cs" />

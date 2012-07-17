@@ -76,6 +76,7 @@
     <Compile Include="RtmAuthorizerTest.cs" />
     <Compile Include="RtmBaseTest.cs" />
     <Compile Include="RtmUtilsTest.cs" />
+    <Compile Include="RtmClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReactiveTheMilk\ReactiveTheMilk.csproj">
