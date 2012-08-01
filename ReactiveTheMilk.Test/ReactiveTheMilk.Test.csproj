@@ -42,7 +42,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\ReactiveProperty.0.3.2.0\lib\NET40\ReactiveProperty.NET40.dll</HintPath>
     </Reference>
-    <Reference Include="ReactiveProperty.NET40.Moles, Version=0.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ReactiveProperty.NET40.Moles, Version=0.3.2.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="ReactiveTheMilk.Moles, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Behaviors, Version=0.94.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
