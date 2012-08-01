@@ -283,6 +283,14 @@
             <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.Converter"/>
             </summary>
         </member>
+        <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.IgnoreEventArgsGet">
+            <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.IgnoreEventArgs"/>
+            </summary>
+        </member>
+        <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.IgnoreEventArgsSetBoolean">
+            <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.IgnoreEventArgs"/>
+            </summary>
+        </member>
         <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.InvokeObject">
             <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Interactivity.EventToReactive.Invoke(System.Object)"/>
             </summary>
@@ -304,6 +312,14 @@
         </member>
         <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.AllInstances.ConverterSetFuncOfObjectObject">
             <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.Converter"/>
+            </summary>
+        </member>
+        <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.AllInstances.IgnoreEventArgsGet">
+            <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.IgnoreEventArgs"/>
+            </summary>
+        </member>
+        <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.AllInstances.IgnoreEventArgsSetBoolean">
+            <summary>Sets the mole of <see cref="P:Codeplex.Reactive.Interactivity.EventToReactive.IgnoreEventArgs"/>
             </summary>
         </member>
         <member name="P:Codeplex.Reactive.Interactivity.Moles.MEventToReactive.AllInstances.InvokeObject">
@@ -603,8 +619,8 @@
             <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Extensions.ObservablePairwiseExtensions.Pairwise``2(System.IObservable`1{``0},System.Func`3{``0,``0,``1})"/>
             </summary>
         </member>
-        <member name="M:Codeplex.Reactive.Extensions.Moles.MObservablePairwiseExtensions._Pairwiseb__0OldNewPairOfTT``1(Microsoft.Moles.Framework.MolesDelegates.Func{Codeplex.Reactive.Extensions.OldNewPair{``0},``0,Codeplex.Reactive.Extensions.OldNewPair{``0}})">
-            <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Extensions.ObservablePairwiseExtensions.&lt;Pairwise&gt;b__0``1(Codeplex.Reactive.Extensions.OldNewPair`1{``0},``0)"/>
+        <member name="M:Codeplex.Reactive.Extensions.Moles.MObservablePairwiseExtensions._Pairwiseb__0TT``1(Microsoft.Moles.Framework.MolesDelegates.Func{``0,``0,Codeplex.Reactive.Extensions.OldNewPair{``0}})">
+            <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Extensions.ObservablePairwiseExtensions.&lt;Pairwise&gt;b__0``1(``0,``0)"/>
             </summary>
         </member>
         <member name="P:Codeplex.Reactive.Extensions.Moles.MObservablePairwiseExtensions.Behavior">
@@ -1343,6 +1359,14 @@
         <member name="M:Codeplex.Reactive.Moles.MReactiveProperty01.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
         </member>
+        <member name="M:Codeplex.Reactive.Moles.MReactiveProperty01.FromObjectTTargetExpressionOfFuncOfTTargetTPropertyFuncOfTPropertyTResultFuncOfTResultTPropertyISchedulerReactivePropertyMode``3(Microsoft.Moles.Framework.MolesDelegates.Func{``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Func{``1,``2},System.Func{``2,``1},System.Reactive.Concurrency.IScheduler,Codeplex.Reactive.ReactivePropertyMode,Codeplex.Reactive.ReactiveProperty{``2}})">
+            <summary>Sets the mole of <see cref="M:Codeplex.Reactive.ReactiveProperty.FromObject``3(``0,System.Linq.Expressions.Expression`1{System.Func`2{``0,``1}},System.Func`2{``1,``2},System.Func`2{``2,``1},System.Reactive.Concurrency.IScheduler,Codeplex.Reactive.ReactivePropertyMode)"/>
+            </summary>
+        </member>
+        <member name="M:Codeplex.Reactive.Moles.MReactiveProperty01.FromObjectTTargetExpressionOfFuncOfTTargetTPropertyFuncOfTPropertyTResultFuncOfTResultTPropertyReactivePropertyMode``3(Microsoft.Moles.Framework.MolesDelegates.Func{``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Func{``1,``2},System.Func{``2,``1},Codeplex.Reactive.ReactivePropertyMode,Codeplex.Reactive.ReactiveProperty{``2}})">
+            <summary>Sets the mole of <see cref="M:Codeplex.Reactive.ReactiveProperty.FromObject``3(``0,System.Linq.Expressions.Expression`1{System.Func`2{``0,``1}},System.Func`2{``1,``2},System.Func`2{``2,``1},Codeplex.Reactive.ReactivePropertyMode)"/>
+            </summary>
+        </member>
         <member name="M:Codeplex.Reactive.Moles.MReactiveProperty01.FromObjectTTargetExpressionOfFuncOfTTargetTPropertyISchedulerReactivePropertyMode``2(Microsoft.Moles.Framework.MolesDelegates.Func{``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Reactive.Concurrency.IScheduler,Codeplex.Reactive.ReactivePropertyMode,Codeplex.Reactive.ReactiveProperty{``1}})">
             <summary>Sets the mole of <see cref="M:Codeplex.Reactive.ReactiveProperty.FromObject``2(``0,System.Linq.Expressions.Expression`1{System.Func`2{``0,``1}},System.Reactive.Concurrency.IScheduler,Codeplex.Reactive.ReactivePropertyMode)"/>
             </summary>
@@ -1505,10 +1529,6 @@
         </member>
         <member name="M:Codeplex.Reactive.Extensions.Moles.MRetryObservableExtensions.OnErrorRetryIObservableOfTSourceActionOfTExceptionTimeSpan``2(Microsoft.Moles.Framework.MolesDelegates.Func{System.IObservable{``0},System.Action{``1},System.TimeSpan,System.IObservable{``0}})">
             <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Extensions.RetryObservableExtensions.OnErrorRetry``2(System.IObservable`1{``0},System.Action`1{``1},System.TimeSpan)"/>
-            </summary>
-        </member>
-        <member name="M:Codeplex.Reactive.Extensions.Moles.MRetryObservableExtensions._OnErrorRetryb__0Exception``1(Microsoft.Moles.Framework.MolesDelegates.Action{System.Exception})">
-            <summary>Sets the mole of <see cref="M:Codeplex.Reactive.Extensions.RetryObservableExtensions.&lt;OnErrorRetry&gt;b__0``1(System.Exception)"/>
             </summary>
         </member>
         <member name="P:Codeplex.Reactive.Extensions.Moles.MRetryObservableExtensions.Behavior">
