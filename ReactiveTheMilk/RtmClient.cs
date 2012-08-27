@@ -36,7 +36,7 @@ namespace ReactiveTheMilk
             Archived = ((string)list.Attribute("archived") == "1"),
             Position = (int)list.Attribute("position"),
             Smart = ((string)list.Attribute("smart") == "1"),
-            Filter = list.Element("filter").Value,
+            Filter = list.Element("filter") != null ? list.Element("filter").Value : null,
           })
         ;
     }

@@ -66,7 +66,6 @@ namespace ReactiveTheMilk
 				<lists>
 					<list id=""1"" name=""Inbox""
 						deleted=""0"" locked=""0"" archived=""0"" position=""-1"" smart=""0"">
-						<filter>(priority:1)</filter>
 					</list>
 					<list id=""2"" name=""Work""
 						deleted=""1"" locked=""1"" archived=""1"" position=""1"" smart=""1"">
@@ -92,7 +91,7 @@ namespace ReactiveTheMilk
         list.Archived.Is(false);
         list.Position.Is(-1);
         list.Smart.Is(false);
-        list.Filter.Is("(priority:1)");
+        list.Filter.IsNull();
       }
       {
         var list = lists[1];
@@ -102,6 +101,7 @@ namespace ReactiveTheMilk
         list.Archived.Is(true);
         list.Position.Is(1);
         list.Smart.Is(true);
+        list.Filter.Is("(priority:1)");
       }
     }
 
