@@ -125,20 +125,20 @@
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.GetToken(System.String)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__0String">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__0(System.String)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__4String">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__4(System.String)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__1XElement">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__1(System.Xml.Linq.XElement)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetFrobb__5XElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetFrob&gt;b__5(System.Xml.Linq.XElement)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetTokenb__6String">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetToken&gt;b__6(System.String)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetTokenb__aString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetToken&gt;b__a(System.String)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetTokenb__7XElement">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetToken&gt;b__7(System.Xml.Linq.XElement)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmAuthorizer._GetTokenb__bXElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmAuthorizer.&lt;GetToken&gt;b__b(System.Xml.Linq.XElement)"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MRtmAuthorizer.AllInstances">
@@ -257,20 +257,20 @@
             <summary>Sets the mole of <see cref="P:ReactiveTheMilk.RtmClient.Token"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__5String">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__5(System.String)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__1String">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__1(System.String)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__6XElement">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__6(System.Xml.Linq.XElement)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__2XElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__2(System.Xml.Linq.XElement)"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__7IEnumerableOfXElement">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__7(System.Collections.Generic.IEnumerable`1{System.Xml.Linq.XElement})"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__3IEnumerableOfXElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__3(System.Collections.Generic.IEnumerable`1{System.Xml.Linq.XElement})"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__8XElement">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__8(System.Xml.Linq.XElement)"/>
+        <member name="P:ReactiveTheMilk.Moles.MRtmClient._GetListsb__4XElement">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmClient.&lt;GetLists&gt;b__4(System.Xml.Linq.XElement)"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MRtmClient.AllInstances">
@@ -683,6 +683,48 @@
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmUtils.&lt;GenerateSignature&gt;b__1(ReactiveTheMilk.Parameter)"/>
             </summary>
         </member>
+        <member name="T:ReactiveTheMilk.Moles.MSignatureGenerator">
+            <summary>Mole type of <see cref="T:ReactiveTheMilk.SignatureGenerator"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MSignatureGenerator.#ctor">
+            <summary>Initializes a new mole</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MSignatureGenerator.#ctor(ReactiveTheMilk.SignatureGenerator)">
+            <summary>Initializes a new mole for the given instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MSignatureGenerator.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.MSignatureGenerator.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator.Behavior">
+            <summary>Assigns the behavior for all methods of the moled type</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator.ConstructorString">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.SignatureGenerator.#ctor(System.String)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator.GenerateIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.SignatureGenerator.Generate(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator._Generateb__0Parameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.SignatureGenerator.&lt;Generate&gt;b__0(ReactiveTheMilk.Parameter)"/>
+            </summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator._Generateb__1Parameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.SignatureGenerator.&lt;Generate&gt;b__1(ReactiveTheMilk.Parameter)"/>
+            </summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.MSignatureGenerator.AllInstances">
+            <summary>Define moles for all instances members</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.MSignatureGenerator.AllInstances.GenerateIEnumerableOfParameter">
+            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.SignatureGenerator.Generate(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
+            </summary>
+        </member>
         <member name="T:ReactiveTheMilk.Moles.SParameter">
             <summary>Stub type of <see cref="T:ReactiveTheMilk.Parameter"/>
             .</summary>
@@ -809,6 +851,22 @@
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
         </member>
         <member name="P:ReactiveTheMilk.Moles.SRtmUser.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="T:ReactiveTheMilk.Moles.SSignatureGenerator">
+            <summary>Stub type of <see cref="T:ReactiveTheMilk.SignatureGenerator"/>
+            .</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SSignatureGenerator.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:ReactiveTheMilk.Moles.SSignatureGenerator.InitializeStub">
+            <summary>Initializes a new instance of type SSignatureGenerator</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SSignatureGenerator.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:ReactiveTheMilk.Moles.SSignatureGenerator.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>
         </member>
     </members>

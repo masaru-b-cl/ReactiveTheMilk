@@ -66,6 +66,7 @@
     <Compile Include="RtmUser.cs" />
     <Compile Include="RtmUtils.cs" />
     <Compile Include="IEnumerableExtensions.cs" />
+    <Compile Include="SignatureGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
