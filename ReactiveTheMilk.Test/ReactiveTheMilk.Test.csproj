@@ -75,7 +75,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RtmAuthorizerTest.cs" />
     <Compile Include="RtmBaseTest.cs" />
-    <Compile Include="RtmUtilsTest.cs" />
     <Compile Include="RtmClientTest.cs" />
     <Compile Include="SignatureGeneratorTest.cs" />
   </ItemGroup>

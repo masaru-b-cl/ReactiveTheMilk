@@ -25,6 +25,8 @@ namespace ReactiveTheMilk
     /// </summary>
     protected string _secret;
 
+    protected readonly SignatureGenerator signatureGenerator;
+
     /// <summary>
     /// コンストラクタ
     /// </summary>
@@ -34,16 +36,7 @@ namespace ReactiveTheMilk
     {
       this._apiKey = apiKey;
       this._secret = secret;
-    }
-
-    /// <summary>
-    /// signature生成
-    /// </summary>
-    /// <param name="parameters"></param>
-    /// <returns></returns>
-    public string GenerateSignature(IEnumerable<Parameter> parameters)
-    {
-      return RtmUtils.GenerateSignature(parameters, this._secret);
+      this.signatureGenerator = new SignatureGenerator(this._secret);
     }
 
     /// <summary>
@@ -70,7 +63,7 @@ namespace ReactiveTheMilk
       paramList.Add("api_key", this._apiKey);
 
       // signature生成
-      string signature = GenerateSignature(paramList);
+      string signature = this.signatureGenerator.Generate(paramList);
       paramList.Add("api_sig", signature);
 
       // POSTパラメータ構築

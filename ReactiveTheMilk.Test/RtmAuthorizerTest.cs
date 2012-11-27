@@ -52,28 +52,6 @@ namespace ReactiveTheMilk
       var called = false;
       var frob = "frob";
 
-      MRtmUtils.GenerateSignatureIEnumerableOfParameterString = (parameters, secret) =>
-        {
-          var paramarray = parameters.ToArray();
-          {
-            var parameter = paramarray[0];
-            parameter.Key.Is("api_key");
-            parameter.Value.Is(ApiKey);
-          }
-          {
-            var parameter = paramarray[1];
-            parameter.Key.Is("perms");
-            parameter.Value.Is("delete");
-          }
-          {
-            var parameter = paramarray[2];
-            parameter.Key.Is("frob");
-            parameter.Value.Is(frob);
-          }
-          called = true;
-          return "signature";
-        };
-
       string url = rtm.GetAuthenticationUrl(frob);
 
       called.Is(true);

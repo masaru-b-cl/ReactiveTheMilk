@@ -183,10 +183,6 @@
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.CreateRtmWebRequest"/>
             </summary>
         </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmBase.GenerateSignatureIEnumerableOfParameter">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
-            </summary>
-        </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmBase.GetRtmResponseString">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GetRtmResponse(System.String)"/>
             </summary>
@@ -205,10 +201,6 @@
         </member>
         <member name="T:ReactiveTheMilk.Moles.MRtmBase.AllInstances">
             <summary>Define moles for all instances members</summary>
-        </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GenerateSignature(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter})"/>
-            </summary>
         </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmBase.AllInstances.GetRtmResponseString">
             <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmBase.GetRtmResponse(System.String)"/>
@@ -653,34 +645,6 @@
         </member>
         <member name="P:ReactiveTheMilk.Moles.MRtmUser.AllInstances.UsernameSetString">
             <summary>Sets the mole of <see cref="P:ReactiveTheMilk.RtmUser.Username"/>
-            </summary>
-        </member>
-        <member name="T:ReactiveTheMilk.Moles.MRtmUtils">
-            <summary>Mole type of <see cref="T:ReactiveTheMilk.RtmUtils"/>
-            .</summary>
-        </member>
-        <member name="M:ReactiveTheMilk.Moles.MRtmUtils.#ctor">
-            <summary>Initializes a new instance</summary>
-        </member>
-        <member name="M:ReactiveTheMilk.Moles.MRtmUtils.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the moled type</summary>
-        </member>
-        <member name="M:ReactiveTheMilk.Moles.MRtmUtils.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the moled type</summary>
-        </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmUtils.Behavior">
-            <summary>Assigns the behavior for all methods of the moled type</summary>
-        </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmUtils.GenerateSignatureIEnumerableOfParameterString">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmUtils.GenerateSignature(System.Collections.Generic.IEnumerable`1{ReactiveTheMilk.Parameter},System.String)"/>
-            </summary>
-        </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmUtils._GenerateSignatureb__0Parameter">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmUtils.&lt;GenerateSignature&gt;b__0(ReactiveTheMilk.Parameter)"/>
-            </summary>
-        </member>
-        <member name="P:ReactiveTheMilk.Moles.MRtmUtils._GenerateSignatureb__1Parameter">
-            <summary>Sets the mole of <see cref="M:ReactiveTheMilk.RtmUtils.&lt;GenerateSignature&gt;b__1(ReactiveTheMilk.Parameter)"/>
             </summary>
         </member>
         <member name="T:ReactiveTheMilk.Moles.MSignatureGenerator">

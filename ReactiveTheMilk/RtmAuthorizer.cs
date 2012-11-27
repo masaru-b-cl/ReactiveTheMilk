@@ -34,7 +34,7 @@ namespace ReactiveTheMilk
       parameters.Add("perms", "delete");
       parameters.Add("frob", frob);
 
-      string signature = GenerateSignature(parameters);
+      string signature = this.signatureGenerator.Generate(parameters);
       parameters.Add("api_sig", signature);
 
 

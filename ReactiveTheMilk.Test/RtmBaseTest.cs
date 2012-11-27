@@ -27,29 +27,6 @@ namespace ReactiveTheMilk
 
     [TestMethod]
     [HostType("Moles")]
-    public void TestGenerateSignature()
-    {
-      var parameters = new Parameter[] { };
-
-      var called = false;
-      MRtmUtils.GenerateSignatureIEnumerableOfParameterString = (xs, secret) =>
-        {
-          xs.Is(parameters);
-          secret.Is(Secret);
-
-          called = true;
-
-          return "signature";
-        };
-
-      var signature = rtm.GenerateSignature(parameters);
-
-      called.Is(true);
-      signature.Is("signature");
-    }
-
-    [TestMethod]
-    [HostType("Moles")]
     public void TestGetRtmResponse()
     {
       bool called = false;
@@ -72,21 +49,6 @@ namespace ReactiveTheMilk
     [HostType("Moles")]
     public void TestGetRtmResponseWithParameters()
     {
-      MRtmBase.AllInstances.GenerateSignatureIEnumerableOfParameter =
-        (r, parameters) =>
-        {
-          var array = parameters.ToArray();
-          array[0].Key.Is("key");
-          array[0].Value.Is("value");
-
-          array[1].Key.Is("method");
-          array[1].Value.Is("method");
-
-          array[2].Key.Is("api_key");
-          array[2].Value.Is(ApiKey);
-
-          return "signature";
-        };
 
       MParametersExtension.ToPostDataIEnumerableOfParameter =
         parameters =>
